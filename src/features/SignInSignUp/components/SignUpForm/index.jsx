@@ -26,7 +26,8 @@ function SignUpForm(props) {
 
         >
             {fomikProps => {
-                const { values, touched, errors } = fomikProps;
+                const {  errors } = fomikProps;
+                //values, touched,
                 const noErrors = !errors['displayName']&&!errors['email'] && !errors['password'] &&!errors['confirmPassword'];
                 return (
                     <Form>

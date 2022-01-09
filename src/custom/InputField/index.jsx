@@ -1,9 +1,8 @@
 import { ErrorMessage } from 'formik';
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
 // import { useEffect, useState } from 'react';
 import { FormFeedback, FormGroup, Input, Label } from 'reactstrap';
-import './style.scss'
+import './style.scss';
 
 function InputField(props) {
     const { field, form, label, placeholder, type } = props;

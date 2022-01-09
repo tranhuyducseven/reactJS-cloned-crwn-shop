@@ -7,7 +7,7 @@ function Home(props) {
     return (
         <Routes>
             <Route path="" element={<MainPage/>} />            
-            <Route element={<NotFound />} />
+            <Route path='*' element={<NotFound />} />
         </Routes>
     )
 }

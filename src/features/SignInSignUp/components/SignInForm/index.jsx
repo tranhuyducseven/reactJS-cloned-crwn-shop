@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { FastField, Form, Formik } from 'formik'
 import InputField from 'custom/InputField';
-import * as Yup from 'yup';
-import { Button, FormGroup } from 'reactstrap';
-import './style.scss'
 import { signInWithGoogleAuth } from 'firebaseConfig/firebase.utils';
+import { FastField, Form, Formik } from 'formik';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Button, FormGroup } from 'reactstrap';
+import * as Yup from 'yup';
+import './style.scss';
 
 
 
@@ -26,7 +26,8 @@ function SignInForm(props) {
 
         >
             {fomikProps => {
-                const { values, touched, errors } = fomikProps;
+                const { errors } = fomikProps;
+                //values, touched,
                 const noErrors = !errors['email'] && !errors['password'];
                 return (
                     <Form>

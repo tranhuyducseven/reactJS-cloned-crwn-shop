@@ -60,10 +60,10 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shop/" element={<Shop />} />
+            <Route path="/shop/*" element={<Shop />} />
             <Route path="/checkout/*" element={<Checkout />} />
             <Route path="/sign-in/*" element={users.currentUser ? <Navigate replace to="/" /> : <SignInSignUp />} />
-            <Route element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </Suspense>
